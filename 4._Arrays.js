@@ -6,6 +6,9 @@
 const letters = ["a", "b", "c"];
 // show b in the console 
 
+letters.forEach(v => {
+    if(v.match("b")) console.log(v);
+});
 
 // --------------------------------------
 // Exercise 2 - Array Positioning
@@ -14,6 +17,23 @@ const friends = [];
 
 // What a lonely array. Add at least 3 friend objects to it.  
 
+const friend1 = {
+    name: "Mathias"
+}
+
+friends.push(friend1);
+
+const friend2 ={
+    name: "Anders"
+} 
+friends.push(friend2);
+
+const friend3 = {
+    name: "Niklas"
+} 
+friends.push(friend3);
+
+console.log(friends);
 
 // --------------------------------------
 // Exercise 3 - Get the index of first occurance of that value. 
@@ -23,7 +43,9 @@ const significantMathNumbers = [0, 2.718, 3.14159, 1729];
 // You want to programmatically find where the number 1729 is in the array.
 // programmatically means that no finger counting allowed. There is a method for this (finding index based of value). 
 
+const numberProgrammatically = significantMathNumbers.find(num => num === 1729);
 
+console.log(numberProgrammatically)
 // --------------------------------------
 // Exercise 4 - Inserting elements
 
@@ -31,8 +53,9 @@ const diet = ["tomato", "cucumber", "rocket"];
 
 // You are a programmer. In one line (one statement) insert hamburger, soda and pizza between the elements cucumber and rocket
 
+diet.splice(2,0, "hamburger", "soda", "pizza");
 
-
+console.log(diet);
 
 // --------------------------------------
 // Exercise 5 - Remove element
@@ -41,7 +64,11 @@ const diet = ["tomato", "cucumber", "rocket"];
 // Don't remove by index. You know in advance that it's the last in the array because you are too full already. 
 
 
+const arr = ["hej", "med", "dig"];
 
+arr.splice(2,1);
+
+console.log(arr);
 
 
 // --------------------------------------
@@ -49,7 +76,14 @@ const diet = ["tomato", "cucumber", "rocket"];
 
 // You really like your daily diet from last exercise. Copy it to a new array called dinnerTray so you can give it to a friend.  
 
+const dinnerTray = diet;
 
+const myFriend = {
+    name: "mathias",
+    dinnerTray
+}
+
+console.log(myFriend)
 
 // --------------------------------------
 // Exercise 7 - For loop
@@ -58,6 +92,10 @@ const lettersExpanded = ["a", "b", "c", "d", "e", "f", "g", "h"];
 
 // log every second char in the array starting from b
 
+lettersExpanded.forEach((v,i) => {
+    if(!v.includes("a") && (i+1)%2== 0) 
+        console.log(v);
+    });
 
 
 // --------------------------------------
@@ -69,6 +107,13 @@ const discardedNumbers = [];
 
 // log the element if the number is above 6 or below 0
 // else push them to the array discardedNumbers
+
+numbers.forEach(v => {
+    if(v > 6 || v < 0) console.log(v);
+    else discardedNumbers.push(v);
+});
+
+console.log(discardedNumbers);
 
 // --------------------------------------
 
