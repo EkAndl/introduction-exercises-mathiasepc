@@ -92,8 +92,8 @@ const lettersExpanded = ["a", "b", "c", "d", "e", "f", "g", "h"];
 
 // log every second char in the array starting from b
 
-lettersExpanded.forEach((k,v) => {
-    if(!k.includes("a") && (v+1)%2== 0) 
+lettersExpanded.forEach((k,i) => {
+    if(!k.includes("a") && (i+1)%2== 0) 
         console.log(k);
     });
 
